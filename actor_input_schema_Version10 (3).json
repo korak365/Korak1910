@@ -1,0 +1,135 @@
+{
+    "title": "Input schema of the Product Documentation Change Monitor",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "Documentation URLs to Monitor",
+            "type": "array",
+            "description": "URLs of documentation sites to monitor for changes.",
+            "editor": "requestListSources",
+            "prefill": [
+                {
+                    "url": "https://docs.python.org/3/"
+                }
+            ]
+        },
+        "monitoredProducts": {
+            "title": "Monitored Products/Libraries",
+            "type": "array",
+            "description": "Product names and versions to track (e.g., React 18.0, Node.js 20).",
+            "editor": "json",
+            "default": ["React", "Node.js", "Python", "TypeScript"]
+        },
+        "checkInterval": {
+            "title": "Check Interval (hours)",
+            "type": "integer",
+            "description": "How often to check for updates (recommend 6-24 hours).",
+            "default": 12
+        },
+        "detectChanges": {
+            "title": "Detect Content Changes",
+            "type": "boolean",
+            "description": "Track content/text changes in documentation.",
+            "default": true
+        },
+        "detectNewPages": {
+            "title": "Detect New Pages",
+            "type": "boolean",
+            "description": "Alert when new documentation pages are added.",
+            "default": true
+        },
+        "detectRemovedPages": {
+            "title": "Detect Removed Pages",
+            "type": "boolean",
+            "description": "Alert when documentation pages are removed.",
+            "default": true
+        },
+        "detectStructureChanges": {
+            "title": "Detect Structure Changes",
+            "type": "boolean",
+            "description": "Track navigation and TOC changes.",
+            "default": true
+        },
+        "detectAPIChanges": {
+            "title": "Detect API Changes",
+            "type": "boolean",
+            "description": "Identify added/removed/modified API methods and parameters.",
+            "default": true
+        },
+        "extractCodeExamples": {
+            "title": "Extract Code Examples",
+            "type": "boolean",
+            "description": "Track changes to code samples and examples.",
+            "default": true
+        },
+        "trackVersions": {
+            "title": "Track Multiple Versions",
+            "type": "boolean",
+            "description": "Monitor different version branches (e.g., v1, v2, v3).",
+            "default": true
+        },
+        "extractDeprecations": {
+            "title": "Extract Deprecation Notices",
+            "type": "boolean",
+            "description": "Flag deprecated features and APIs.",
+            "default": true
+        },
+        "extractReleaseNotes": {
+            "title": "Extract Release Notes",
+            "type": "boolean",
+            "description": "Capture official release notes and changelogs.",
+            "default": true
+        },
+        "compareWithPrevious": {
+            "title": "Compare With Previous Version",
+            "type": "boolean",
+            "description": "Generate diffs between current and previous scans.",
+            "default": true
+        },
+        "calculateChangeScore": {
+            "title": "Calculate Change Score",
+            "type": "boolean",
+            "description": "Quantify magnitude of changes (minor/major/critical).",
+            "default": true
+        },
+        "notificationLevel": {
+            "title": "Notification Level",
+            "type": "string",
+            "description": "Alert on all changes or only major ones.",
+            "enum": ["all", "major", "critical"],
+            "default": "major"
+        },
+        "alertOnBreakingChanges": {
+            "title": "Alert on Breaking Changes",
+            "type": "boolean",
+            "description": "Prioritize alerts for breaking changes.",
+            "default": true
+        },
+        "includeMetadata": {
+            "title": "Include Metadata",
+            "type": "boolean",
+            "description": "Include document metadata (author, date, etc).",
+            "default": true
+        },
+        "generateSummary": {
+            "title": "Generate AI Summary",
+            "type": "boolean",
+            "description": "Create AI-generated summaries of major changes.",
+            "default": true
+        },
+        "maxPagesToScan": {
+            "title": "Max Pages to Scan",
+            "type": "integer",
+            "description": "Maximum number of documentation pages to process.",
+            "default": 500
+        },
+        "outputFormat": {
+            "title": "Output Format",
+            "type": "string",
+            "description": "Export format for change reports.",
+            "enum": ["json", "markdown", "csv"],
+            "default": "json"
+        }
+    }
+}

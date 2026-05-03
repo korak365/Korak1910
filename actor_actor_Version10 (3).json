@@ -1,0 +1,17 @@
+{
+    "actorSpecification": 1,
+    "name": "product-documentation-change-monitor",
+    "title": "Product Documentation Change Monitor",
+    "description": "Alerts AI agents when an API or library's documentation updates.",
+    "version": "0.0",
+    "meta": {
+        "templateId": "ai-generated-actor",
+        "generatedBy": "Claude (Anthropic)"
+    },
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile"
+}

@@ -1,0 +1,115 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "changes": {
+            "title": "Detected Changes",
+            "transformation": {
+                "fields": ["changeId", "product", "changeType", "severity", "detectedAt", "affectedPages", "description"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "changeId": {
+                        "label": "Change ID",
+                        "format": "text"
+                    },
+                    "product": {
+                        "label": "Product",
+                        "format": "text"
+                    },
+                    "changeType": {
+                        "label": "Type",
+                        "format": "text"
+                    },
+                    "severity": {
+                        "label": "Severity",
+                        "format": "text"
+                    },
+                    "detectedAt": {
+                        "label": "Detected",
+                        "format": "date"
+                    },
+                    "affectedPages": {
+                        "label": "Pages",
+                        "format": "number"
+                    },
+                    "description": {
+                        "label": "Description",
+                        "format": "text"
+                    }
+                }
+            }
+        },
+        "breaking": {
+            "title": "Breaking Changes",
+            "transformation": {
+                "fields": ["changeId", "product", "apiName", "impact", "migrationPath", "detectedAt"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "changeId": {
+                        "label": "Change ID",
+                        "format": "text"
+                    },
+                    "product": {
+                        "label": "Product",
+                        "format": "text"
+                    },
+                    "apiName": {
+                        "label": "API/Feature",
+                        "format": "text"
+                    },
+                    "impact": {
+                        "label": "Impact",
+                        "format": "text"
+                    },
+                    "migrationPath": {
+                        "label": "Migration",
+                        "format": "text"
+                    },
+                    "detectedAt": {
+                        "label": "Detected",
+                        "format": "date"
+                    }
+                }
+            }
+        },
+        "features": {
+            "title": "New Features",
+            "transformation": {
+                "fields": ["featureId", "product", "featureName", "category", "documentation", "version"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "featureId": {
+                        "label": "Feature ID",
+                        "format": "text"
+                    },
+                    "product": {
+                        "label": "Product",
+                        "format": "text"
+                    },
+                    "featureName": {
+                        "label": "Feature",
+                        "format": "text"
+                    },
+                    "category": {
+                        "label": "Category",
+                        "format": "text"
+                    },
+                    "documentation": {
+                        "label": "Doc Link",
+                        "format": "link"
+                    },
+                    "version": {
+                        "label": "Version",
+                        "format": "text"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema of the Product Documentation Change Monitor",
+    "properties": {
+        "detectedChanges": {
+            "type": "string",
+            "title": "Detected Changes",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=changes"
+        },
+        "breakingChanges": {
+            "type": "string",
+            "title": "Breaking Changes Alert",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=breaking"
+        },
+        "newFeatures": {
+            "type": "string",
+            "title": "New Features & APIs",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=features"
+        },
+        "changeReport": {
+            "type": "string",
+            "title": "Complete Change Report",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records?key=CHANGE_REPORT"
+        },
+        "changeHistory": {
+            "type": "string",
+            "title": "Change History",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records?key=CHANGE_HISTORY"
+        },
+        "agentAlerts": {
+            "type": "string",
+            "title": "AI Agent Alerts",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records?key=AGENT_ALERTS"
+        }
+    }
+}
